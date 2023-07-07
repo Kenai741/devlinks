@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
@@ -24,7 +25,9 @@
 }
 
 body {
-  background: var(--bg-url) no-repeat top center / cover;
+  background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
+  overflow: hidden;
 }
 
 body * {
@@ -33,7 +36,8 @@ body * {
 }
 
 #container {
-  width: 360px;
+  width: 100%;
+  max-width: 588px;
   margin: 55px auto 0px;
   padding: 0 25px;
 }
@@ -138,4 +142,14 @@ footer {
   padding: 25px 0;
   text-align: center;
   font-size: 15px;
+}
+
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/bg-desktop.jpg);
+  }
+
+  .light {
+    --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
 }
